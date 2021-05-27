@@ -3,9 +3,18 @@
 
 import random
 
+import os
+from dotenv import load_dotenv 
+
+load_dotenv() 
+
+PLAYER_NAME = os.getenv("PLAYER_NAME", default="Player One")
+
 #print("Rock, Paper, Scissors, Shoot!")
 
-print("Welcome 'Player One' to my Rock-Paper-Scissors game!")
+print("-------------------")
+print(f"Welcome '{PLAYER_NAME}' to my Rock-Paper-Scissors game!")
+print("-------------------")
 
 #name = input("Enter your name: ")
 #print("Welcome", name , "to my Rock-Paper-Scissors game!")
@@ -35,6 +44,8 @@ valid_options = ["rock","paper","scissors"]
 computer_choice = random.choice(valid_options)
 print("The computer chose:", computer_choice)
 
+print("-------------------")
+
 if user_choice == computer_choice:
     print(f"Both players selected {user_choice}. It's a tie!")
 elif user_choice == "rock":
@@ -52,5 +63,7 @@ elif user_choice == "scissors":
         print("Scissors cuts paper! You win!")
     else:
         print("Rock beats scissors! You lose.")
+
+print("-------------------")
 
 print("Thanks for playing. Please play again!")

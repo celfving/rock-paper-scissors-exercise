@@ -3,12 +3,17 @@
 
 import random
 
-print("Rock, Paper, Scissors, Shoot!")
+#print("Rock, Paper, Scissors, Shoot!")
 
-user_choice = input("Please choose one of 'rock', 'paper', 'scissors': ")
+print("Welcome 'Player One' to my Rock-Paper-Scissors game!")
+
+#name = input("Enter your name: ")
+#print("Welcome", name , "to my Rock-Paper-Scissors game!")
+
+user_choice = input("Please choose either 'rock', 'paper', or 'scissors': ")
 
 #print(user_choice)
-print("USER CHOICE:", user_choice)
+print("You chose:", user_choice)
 
 # validate the input such that only if it is one of the expected values
 # ... will we continue with the rest of the program
@@ -20,7 +25,7 @@ print("USER CHOICE:", user_choice)
 
 # if user_choice = "rock" or "paper" or "scissors":
 if (user_choice == "rock") or (user_choice == "paper") or (user_choice == "scissors"):
-    print("Valid. Keep going.")
+    print("Great!")
 else:
     print("OOPS. Invalid input. Please try again.")
     exit()
@@ -28,7 +33,7 @@ else:
 
 valid_options = ["rock","paper","scissors"]
 computer_choice = random.choice(valid_options)
-print("COMPUTER CHOICE:", computer_choice)
+print("The computer chose:", computer_choice)
 
 if user_choice == computer_choice:
     print(f"Both players selected {user_choice}. It's a tie!")
@@ -48,4 +53,4 @@ elif user_choice == "scissors":
     else:
         print("Rock beats scissors! You lose.")
 
-print("THIS IS THE END OF OUR GAME. PLEASE PLAY AGAIN")
+print("Thanks for playing. Please play again!")

@@ -3,6 +3,8 @@
 
 import random
 
+# adapted from the run the app exercise (class 1)
+
 import os
 from dotenv import load_dotenv 
 
@@ -45,6 +47,9 @@ computer_choice = random.choice(valid_options)
 print("The computer chose:", computer_choice)
 
 print("-------------------")
+
+
+# adapted from https://realpython.com/python-rock-paper-scissors/#determine-a-winner 
 
 if user_choice == computer_choice:
     print(f"Both players selected {user_choice}. It's a tie!")
